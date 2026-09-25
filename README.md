@@ -169,7 +169,7 @@ Chapbook-v<主版本>.<次版本>.<修订号>.apk
 
 | 项目 | 信息 |
 |---|---|
-| 开发者 | 丁禹承 |
+| 开发者 | wetfs（GitHub） |
 | 邮箱 | 3951265560@qq.com |
 | 反馈方式 | 本仓库 [Issues](../../issues) 或邮件 |
 
@@ -179,6 +179,6 @@ Chapbook-v<主版本>.<次版本>.<修订号>.apk
 
 **本项目非开源，仅提供 APK 文件下载。**
 
-© 2026 丁禹承 · All Rights Reserved
+© 2026 腕卷（Chapbook）· All Rights Reserved
 
 </div>

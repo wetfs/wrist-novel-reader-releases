@@ -1,0 +1,7 @@
+{
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "notes": "腕卷 v1.0.0 首个正式版本\n\n【离线阅读】支持 TXT / EPUB / FB2 / HTML，自动识别 TXT 文件编码，书籍与阅读数据全部保存在本地\n【圆屏排版】圆形表盘安全区适配，文字水平居中完整显示，字号 12–30、行距、字间距、页边距均可调节\n【翻页交互】分页 / 滚动两种阅读模式，支持侧键、屏幕左右点击区、手势拖动与甩动、旋转表圈翻页\n【听书 TTS】调用系统离线语音引擎朗读，支持中文 / 英文语音，语速与音调可调\n【阅读管理】书架、章节目录跳转、全文页码跳转、书签添加与跳转、自动记录进度续读\n【局域网传书】内置 FTP 服务，同一 Wi-Fi 下用电脑或手机上传小说，支持主动 / 被动模式\n【隐私合规】首次启动隐私政策弹窗，第三方 SDK 延迟初始化，可在设置中随时关闭崩溃上报与使用统计",
+  "apkUrl": "https://raw.githubusercontent.com/wetfs/wrist-novel-reader-releases/HEAD/Chapbook-v1.0.0.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.0.0"
+}

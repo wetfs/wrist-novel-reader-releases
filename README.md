@@ -28,18 +28,18 @@
 |---|---|
 | 应用名称 | 腕卷（Chapbook） |
 | 应用包名 | `org.eu.bluesky.chapbook` |
-| **版本号** | **v1.0.0**（versionCode `1`） |
-| **发布日期** | **2026-09-25** |
-| 安装包文件 | [`Chapbook-v1.0.0.apk`](./Chapbook-v1.0.0.apk) |
-| 文件大小 | 4.75 MB |
+| **版本号** | **v1.1.0**（versionCode `2`） |
+| **发布日期** | **2026-09-26** |
+| 安装包文件 | [`Chapbook-v1.1.0.apk`](./Chapbook-v1.1.0.apk) |
+| 文件大小 | 4.79 MB |
 | 支持平台 | Wear OS 3.0 及以上（Android 11 / API 30+，targetSdk 34） |
-| 签名信息 | 官方 Release 签名（请核对下方 SHA-256） |
-| SHA-256 | `A141DCC10551EF005F229575EA55CDF59572337D6C33B1F18FF8D0282F0A1119` |
+| 签名信息 | 官方 Release 签名（与 v1.0.0 同一证书，可原地覆盖升级） |
+| SHA-256 | `A2848BFCCFE8DE2B3D438BB20C1B49E829DD39208068207B59E89639392E10B5` |
 
 > **校验方式（Windows PowerShell）**
 >
 > ```powershell
-> Get-FileHash .\Chapbook-v1.0.0.apk -Algorithm SHA256
+> Get-FileHash .\Chapbook-v1.1.0.apk -Algorithm SHA256
 > ```
 >
 > 请务必核对哈希值，避免安装被篡改的安装包。
@@ -82,6 +82,10 @@
 - 沉浸式阅读控制面板（进度、排版、主题等一站式调节）
 - 翻页震动反馈（默认关闭）、自定义选项丰富
 
+**应用内更新**
+- 「关于与更新」页可检查新版本，展示更新说明并调用系统安装器直接完成升级
+- 启动时若缺少「所有文件访问」权限，自动拉起系统授权页引导授权
+
 **隐私与合规**
 - 首次启动展示隐私政策弹窗，未同意前不初始化任何第三方 SDK
 - 可在「设置 → 隐私与数据」中随时关闭崩溃诊断上报与使用情况统计
@@ -93,21 +97,21 @@
 
 ### 1. 下载
 
-点击本仓库中的 [`Chapbook-v1.0.0.apk`](./Chapbook-v1.0.0.apk)，或前往 [Releases](../../releases) 页面下载对应版本。
+点击本仓库中的 [`Chapbook-v1.1.0.apk`](./Chapbook-v1.1.0.apk)，或前往 [Releases](../../releases) 页面下载对应版本。
 
 ### 2. 安装到手表
 
 **方式一：通过 ADB 侧载（推荐）**
 
 ```bash
-adb install -r Chapbook-v1.0.0.apk
+adb install -r Chapbook-v1.1.0.apk
 ```
 
 > 若手表已通过无线调试连接，且安装过程中出现 `device offline`，
 > 建议改用 Push 安装模式（Wear OS 3+ 对较大 APK 的流式安装易掉线）：
 >
 > ```bash
-> adb install --no-streaming -r Chapbook-v1.0.0.apk
+> adb install --no-streaming -r Chapbook-v1.1.0.apk
 > ```
 
 **方式二：手机伴生应用（Galaxy Wearable / 腕上助手等）**
@@ -133,6 +137,7 @@ adb shell appops set org.eu.bluesky.chapbook MANAGE_EXTERNAL_STORAGE allow
 
 | 版本号 | 发布日期 | 安装包 | 更新说明 |
 |---|---|---|---|
+| v1.1.0 | 2026-09-26 | `Chapbook-v1.1.0.apk` | 新增「关于与更新」页，支持应用内检查更新并调用系统安装器完成升级；启动时若缺少「所有文件访问」权限，自动拉起系统授权页；修复滚动模式下偶发半截行显示。 |
 | v1.0.0 | 2026-09-25 | `Chapbook-v1.0.0.apk` | 首个正式发布版本。离线阅读（TXT / EPUB / FB2 / HTML）、圆屏排版、分页与滚动两种阅读模式、侧键/点击/手势/表圈翻页、听书（TTS）、书架/目录/书签、局域网 FTP 传书、沉浸式设置面板、隐私合规弹窗与开关。 |
 
 > 后续版本将在此表格与 [Releases](../../releases) 页面同步更新，安装包命名规则为 `Chapbook-v<版本号>.apk`。

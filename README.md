@@ -28,18 +28,18 @@
 |---|---|
 | 应用名称 | 腕卷（Chapbook） |
 | 应用包名 | `org.eu.bluesky.chapbook` |
-| **版本号** | **v1.1.0**（versionCode `2`） |
+| **版本号** | **v1.1.1**（versionCode `3`） |
 | **发布日期** | **2026-09-26** |
-| 安装包文件 | [`Chapbook-v1.1.0.apk`](./Chapbook-v1.1.0.apk) |
-| 文件大小 | 4.79 MB |
+| 安装包文件 | [`Chapbook-v1.1.1.apk`](./Chapbook-v1.1.1.apk) |
+| 文件大小 | 4.94 MB |
 | 支持平台 | Wear OS 3.0 及以上（Android 11 / API 30+，targetSdk 34） |
 | 签名信息 | 官方 Release 签名（与 v1.0.0 同一证书，可原地覆盖升级） |
-| SHA-256 | `A2848BFCCFE8DE2B3D438BB20C1B49E829DD39208068207B59E89639392E10B5` |
+| SHA-256 | `2C5373DD52C34D96EFE012FCA7E0E2A34245D27C204D6ECE0F44993485027992` |
 
 > **校验方式（Windows PowerShell）**
 >
 > ```powershell
-> Get-FileHash .\Chapbook-v1.1.0.apk -Algorithm SHA256
+> Get-FileHash .\Chapbook-v1.1.1.apk -Algorithm SHA256
 > ```
 >
 > 请务必核对哈希值，避免安装被篡改的安装包。
@@ -57,6 +57,10 @@
 - 针对圆形表盘做安全区适配，文字在圆屏内水平居中、完整显示
 - 字号（12–30）、行距、字间距、页边距均可调节
 - 内置多种阅读主题与背景，支持屏幕常亮
+
+**中文排版与字体**
+- 自定义字体：用「FTP 传书」把 `.ttf` / `.otf` 字体文件传到手表书库，即可在「字体」页选用
+- 繁简转换：支持「简体 → 繁体」「繁体 → 简体」，转换字表来自 OpenCC
 
 **多种翻页与交互方式**
 - 分页 / 滚动两种阅读模式
@@ -97,22 +101,24 @@
 
 ### 1. 下载
 
-点击本仓库中的 [`Chapbook-v1.1.0.apk`](./Chapbook-v1.1.0.apk)，或前往 [Releases](../../releases) 页面下载对应版本。
+点击本仓库中的 [`Chapbook-v1.1.1.apk`](./Chapbook-v1.1.1.apk)，或前往 [Releases](../../releases) 页面下载对应版本。
 
 ### 2. 安装到手表
 
 **方式一：通过 ADB 侧载（推荐）**
 
 ```bash
-adb install -r Chapbook-v1.1.0.apk
+adb install -r Chapbook-v1.1.1.apk
 ```
 
 > 若手表已通过无线调试连接，且安装过程中出现 `device offline`，
 > 建议改用 Push 安装模式（Wear OS 3+ 对较大 APK 的流式安装易掉线）：
 >
 > ```bash
-> adb install --no-streaming -r Chapbook-v1.1.0.apk
+> adb install --no-streaming -r Chapbook-v1.1.1.apk
 > ```
+
+> 已安装旧版本（v1.0.0 及以上）时可直接覆盖安装；也可在应用内「设置 → 关于与更新」页检查并升级。
 
 **方式二：手机伴生应用（Galaxy Wearable / 腕上助手等）**
 
@@ -137,6 +143,7 @@ adb shell appops set org.eu.bluesky.chapbook MANAGE_EXTERNAL_STORAGE allow
 
 | 版本号 | 发布日期 | 安装包 | 更新说明 |
 |---|---|---|---|
+| v1.1.1 | 2026-09-26 | `Chapbook-v1.1.1.apk` | 【新功能】章节间无缝翻页：章末自动跳转下一章，章首向前翻页回到上一章末页，通过预加载相邻章节排版消除跨章翻页的空白间隙；关于页新增源代码仓库地址。【优化】跨章节翻页命中预加载时同步套用排版结果，新页立即可绘制。 |
 | v1.1.0 | 2026-09-26 | `Chapbook-v1.1.0.apk` | 新增「关于与更新」页，支持应用内检查更新并调用系统安装器完成升级；启动时若缺少「所有文件访问」权限，自动拉起系统授权页；修复滚动模式下偶发半截行显示。 |
 | v1.0.0 | 2026-09-25 | `Chapbook-v1.0.0.apk` | 首个正式发布版本。离线阅读（TXT / EPUB / FB2 / HTML）、圆屏排版、分页与滚动两种阅读模式、侧键/点击/手势/表圈翻页、听书（TTS）、书架/目录/书签、局域网 FTP 传书、沉浸式设置面板、隐私合规弹窗与开关。 |
 

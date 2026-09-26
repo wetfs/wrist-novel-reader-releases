@@ -1,7 +1,7 @@
 {
-  "versionCode": 2,
-  "versionName": "1.1.0",
-  "notes": "1. 新增「关于与更新」页，支持应用内检查更新并调用系统安装器完成升级\n2. 启动时若缺少「所有文件访问」权限，自动拉起系统授权页\n3. 修复滚动模式下偶发半截行显示",
-  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.0/Chapbook-v1.1.0.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.0"
+  "versionCode": 3,
+  "versionName": "1.1.1",
+  "notes": "【新功能】\n1. 章节间无缝翻页：阅读到章末时自动跳转下一章、在章首向前翻页自动回到上一章末页；通过预加载相邻章节排版，消除跨章节翻页时新页尚未就绪的空白间隙，翻页动画全程连贯。\n2. 关于页新增源代码仓库地址：以文本形式展示 GitHub 仓库链接，便于在其他设备上访问项目源码。\n【优化】\n3. 跨章节翻页命中预加载时同步套用排版结果，新页立即可绘制，无需等待后台异步排版完成。",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.1/Chapbook-v1.1.1.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.1"
 }

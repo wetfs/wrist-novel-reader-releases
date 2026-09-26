@@ -3,6 +3,6 @@
   "versionName": "1.1.5",
   "notes": "1. 界面全面升级到 Material Design 3：默认黑灰白中性配色，支持动态取色（跟随系统表盘/壁纸，可在设置中开启），统一圆角、字阶与动效规范，并重做加载指示器与弹窗/面板的进出场动画\n2. 新增夜览模式、显示范围四边精细调节、自定义字体与繁简转换\n3. 阅读页菜单改为上滑呼出，翻页与跨章衔接更连贯；启动与「关于」页均支持检查更新并应用内下载安装",
   "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk",
-  "apkUrlFallback": "",
+  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk",
   "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.5"
 }

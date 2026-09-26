@@ -1,7 +1,7 @@
 {
-  "versionCode": 3,
-  "versionName": "1.1.1",
-  "notes": "【新功能】\n1. 章节间无缝翻页：阅读到章末时自动跳转下一章、在章首向前翻页自动回到上一章末页；通过预加载相邻章节排版，消除跨章节翻页时新页尚未就绪的空白间隙，翻页动画全程连贯。\n2. 关于页新增源代码仓库地址：以文本形式展示 GitHub 仓库链接，便于在其他设备上访问项目源码。\n【优化】\n3. 跨章节翻页命中预加载时同步套用排版结果，新页立即可绘制，无需等待后台异步排版完成。",
-  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.1/Chapbook-v1.1.1.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.1"
+  "versionCode": 4,
+  "versionName": "1.1.2",
+  "notes": "【新功能】\n1. 显示范围调节：正文四周内边距可独立调整，提供紧凑/默认/宽松三档预设、单边整像素滑块与精确像素输入；调节页实时预览正文区与系统安全区，文字距屏幕边缘过近时给出警示并支持一键优化。\n2. 夜览模式：将任意阅读主题变换为低亮度暖色夜视配色，夜览强度无级可调，自动保证正文与背景对比度不低于 WCAG AA 标准（4.5:1）；默认开启，可在设置中关闭。\n3. 启动自动检查更新：发现新版本时弹窗展示更新内容，可直接在弹窗内下载并调用系统安装器完成升级；选择「稍后提醒」后该版本周期内不再自动打扰。\n【修复】\n4. 修复上滑呼出阅读菜单与左右滑动翻页偶发互相误判的问题。",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.2/Chapbook-v1.1.2.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.2"
 }

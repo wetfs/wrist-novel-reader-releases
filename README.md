@@ -2,7 +2,7 @@
 
 # 腕卷 · Chapbook
 
-**Wear OS 手表小说阅读器**
+**Wear OS 手表小说 · 漫画阅读器**
 
 官方 Release 安装包（APK）下载页
 
@@ -28,18 +28,18 @@
 |---|---|
 | 应用名称 | 腕卷（Chapbook） |
 | 应用包名 | `org.eu.bluesky.chapbook` |
-| **版本号** | **v1.1.5**（versionCode `7`） |
+| **版本号** | **v1.2.0**（versionCode `8`） |
 | **发布日期** | **2026-09-26** |
-| 安装包文件 | [`Chapbook-v1.1.5.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk) |
-| 文件大小 | 5.20 MB |
+| 安装包文件 | [`Chapbook-v1.2.0.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk) |
+| 文件大小 | 5.29 MB |
 | 支持平台 | Wear OS 3.0 及以上（Android 11 / API 30+，targetSdk 34） |
 | 签名信息 | 官方 Release 签名（与历史版本同一证书，可原地覆盖升级） |
-| SHA-256 | `9E47BFBDFD41E40036CB565E56A62A717AC75977D61CBFCEC6A418659F24AD24` |
+| SHA-256 | `5E2566280FEDEEF64372BF285B5D6251E9D571C0BC6513B50D0F6DD7576E1DBE` |
 
 > **校验方式（Windows PowerShell）**
 >
 > ```powershell
-> Get-FileHash .\Chapbook-v1.1.5.apk -Algorithm SHA256
+> Get-FileHash .\Chapbook-v1.2.0.apk -Algorithm SHA256
 > ```
 >
 > 请务必核对哈希值，避免安装被篡改的安装包。
@@ -49,9 +49,16 @@
 ## 主要功能
 
 **离线阅读**
-- 支持 TXT / EPUB / FB2 / HTML 小说格式
+- 支持 TXT / EPUB / FB2 / HTML 小说，以及 CBZ / ZIP 图片包与图片型 EPUB 漫画
 - 自动识别 TXT 文件编码（UTF-8 / GBK / GB18030 等），避免乱码
 - 书籍、进度、书签、设置全部保存在手表本地，无需联网即可阅读
+
+**漫画阅读**
+- 支持 CBZ / ZIP 图片包与图片型 EPUB，自动识别，无需手动区分类型
+- 单页翻页与纵向连续滚动两种模式，适应屏幕 / 适应宽度可切换
+- 表圈与表冠在漫画模式下重映射为缩放（1x–4x），放大后可拖动查看画面细节
+- 图片按屏幕分辨率降采样解码，长时间阅读保持流畅省电
+- 书架区分小说与漫画，漫画条目显示总页数
 
 **圆屏专属排版**
 - 针对圆形表盘做安全区适配，文字在圆屏内水平居中、完整显示
@@ -59,7 +66,7 @@
 - 内置多种阅读主题与背景，支持屏幕常亮
 
 **中文排版与字体**
-- 自定义字体：用「FTP 传书」把 `.ttf` / `.otf` 字体文件传到手表书库，即可在「字体」页选用
+- 自定义字体：用「传书」把 `.ttf` / `.otf` 字体文件传到手表书库，或在「字体」页一键下载开源字体「霞鹜文楷」（完整版 / Lite 可选，下载源为项目官方发布），下载后与手动传入的字体完全等效
 - 繁简转换：支持「简体 → 繁体」「繁体 → 简体」，转换字表来自 OpenCC
 
 **显示范围与夜览**
@@ -83,9 +90,10 @@
 - 书签：添加、跳转、删除书签
 - 自动记录阅读进度，打开即续读
 
-**局域网传书（FTP）**
-- 手表端一键开启 FTP 服务，同一 Wi-Fi 下用电脑或手机上传小说
-- 支持主动（PORT）/ 被动（PASV）模式，传输失败自动重试
+**局域网传书（网页上传 / FTP）**
+- 网页上传（默认）：手表端一键开启服务后，手机或电脑用浏览器打开地址即可上传，**无需安装任何客户端**；同一页面还会列出当前书架，便于确认上传结果
+- FTP 客户端：兼容 Windows 资源管理器、手机 FTP 应用等标准客户端，可上传与删除；支持主动（PORT）/ 被动（PASV）模式，传输失败自动重试
+- 小说与漫画压缩包均可传输，支持一次选择多个文件
 
 **个性化设置**
 - 沉浸式阅读控制面板（进度、排版、主题等一站式调节）
@@ -107,14 +115,14 @@
 
 ### 1. 下载
 
-点击上方 [`Chapbook-v1.1.5.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk) 直链，或前往 [Releases](../../releases) 页面下载。
+点击上方 [`Chapbook-v1.2.0.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk) 直链，或前往 [Releases](../../releases) 页面下载。
 
-> 历史测试版本（v1.0.0 ~ v1.1.4）已从本仓库清理，仅保留最新正式版本 v1.1.5。
+> 历史测试版本（v1.0.0 ~ v1.1.4）已从本仓库清理，仅保留正式版本 v1.1.5 与 v1.2.0。
 >
 > **中国大陆用户**：GitHub 直链在国内速度较慢，因此应用内更新（「设置 → 关于与更新」与启动更新提示）采用**双源**策略：优先使用 GitHub Release 直链，失败时自动改用国内 GitHub 加速镜像重试，全程无需手动干预。手动下载也可直接使用镜像直链：
 >
 > ```
-> https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk
+> https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk
 > ```
 
 ### 2. 安装到手表
@@ -122,14 +130,14 @@
 **方式一：通过 ADB 侧载（推荐）**
 
 ```bash
-adb install -r Chapbook-v1.1.5.apk
+adb install -r Chapbook-v1.2.0.apk
 ```
 
 > 若手表已通过无线调试连接，且安装过程中出现 `device offline`，
 > 建议改用 Push 安装模式（Wear OS 3+ 对较大 APK 的流式安装易掉线）：
 >
 > ```bash
-> adb install --no-streaming -r Chapbook-v1.1.5.apk
+> adb install --no-streaming -r Chapbook-v1.2.0.apk
 > ```
 
 > 已安装旧版本时可直接覆盖安装；也可在应用内「设置 → 关于与更新」页检查并升级。
@@ -157,6 +165,7 @@ adb shell appops set org.eu.bluesky.chapbook MANAGE_EXTERNAL_STORAGE allow
 
 | 版本号 | 发布日期 | 安装包 | 更新说明 |
 |---|---|---|---|
+| v1.2.0 | 2026-09-26 | [`Chapbook-v1.2.0.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk) | 【漫画】新增 CBZ / ZIP 图片包与图片型 EPUB 阅读（均自动识别），支持单页翻页与纵向连续滚动，表圈 / 表冠可缩放、放大后可拖动。【传书】新增「网页上传」通道：浏览器打开手表地址即可上传，无需安装任何客户端；原 FTP 通道保留。【字体】字体页可一键下载开源字体「霞鹜文楷」（完整版 / Lite 可选），不再需要手动传字体。【其他】书架区分小说与漫画并显示漫画页数；上传文件名过滤非法字符，中文文件名不再乱码。 |
 | v1.1.5 | 2026-09-26 | [`Chapbook-v1.1.5.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk) | **首个正式版本**。【界面】全面迁移到 Material Design 3：默认黑灰白中性配色，支持动态取色（Material You，跟随系统表盘/壁纸），统一 MD3 圆角、字阶与动效令牌，重做加载指示器与弹窗/面板的进出场动画。【体验】阅读页菜单改为上滑呼出；章节间无缝翻页；夜览模式；显示范围四边精细调节；自定义字体与繁简转换。【更新】启动与「关于」页均支持检查更新，应用内下载并调用系统安装器升级。 |
 
 > 历史测试版本（v1.0.0 ~ v1.1.4）属于内测阶段，其 Release、Tag 与安装包均已清理，不再提供下载；v1.1.5 起为对外正式发布版本。

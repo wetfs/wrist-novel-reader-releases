@@ -1,8 +1,8 @@
 {
-  "versionCode": 6,
-  "versionName": "1.1.4",
-  "notes": "1. 首次升级时自动跳转系统「安装未知应用」授权页，开启后返回应用会自动开始下载，无需手动重试\n2. 下载前预检安装权限，避免下载完整安装包后才发现无法安装",
-  "apkUrl": "https://gitee.com/chaihuu/wrist-novel-reader-releases/raw/master/Chapbook-v1.1.4.apk",
-  "apkUrlFallback": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.4/Chapbook-v1.1.4.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.4"
+  "versionCode": 7,
+  "versionName": "1.1.5",
+  "notes": "1. 界面全面升级到 Material Design 3：默认黑灰白中性配色，支持动态取色（跟随系统表盘/壁纸，可在设置中开启），统一圆角、字阶与动效规范，并重做加载指示器与弹窗/面板的进出场动画\n2. 新增夜览模式、显示范围四边精细调节、自定义字体与繁简转换\n3. 阅读页菜单改为上滑呼出，翻页与跨章衔接更连贯；启动与「关于」页均支持检查更新并应用内下载安装",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk",
+  "apkUrlFallback": "",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.5"
 }

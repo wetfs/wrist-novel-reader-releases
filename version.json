@@ -1,8 +1,8 @@
 {
-  "versionCode": 7,
-  "versionName": "1.1.5",
-  "notes": "1. 界面全面升级到 Material Design 3：默认黑灰白中性配色，支持动态取色（跟随系统表盘/壁纸，可在设置中开启），统一圆角、字阶与动效规范，并重做加载指示器与弹窗/面板的进出场动画\n2. 新增夜览模式、显示范围四边精细调节、自定义字体与繁简转换\n3. 阅读页菜单改为上滑呼出，翻页与跨章衔接更连贯；启动与「关于」页均支持检查更新并应用内下载安装",
-  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk",
-  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.1.5"
+  "versionCode": 8,
+  "versionName": "1.2.0",
+  "notes": "1. 新增漫画阅读：支持 CBZ / ZIP 图片包与图片型 EPUB（均自动识别），提供单页翻页与纵向连续滚动两种模式，表圈 / 表冠可缩放，放大后可拖动查看画面细节\n2. 传书新增「网页上传」通道：手机或电脑用浏览器打开手表地址即可上传，无需安装任何客户端；原 FTP 通道保留，两者可在传书页切换\n3. 字体页新增一键下载开源字体「霞鹜文楷」（完整版 / Lite 两个官方版本），按需下载后即可选用\n4. 书架区分小说与漫画并显示漫画页数；上传文件名过滤非法字符，中文文件名不再乱码",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk",
+  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.0"
 }

@@ -1,8 +1,8 @@
 {
-  "versionCode": 9,
-  "versionName": "1.2.1",
-  "notes": "1. 加载指示器全面改为 MD3E 形态变形动画：图形在圆 / 圆角方 / 方 / 三角 / 六角 / 星形 / 花瓣之间连续变形，配合缓慢旋转与呼吸缩放\n2. 更新包与字体下载改为全屏进度页，下载期间覆盖全界面避免误触并保持屏幕常亮（Wear OS 息屏会断开 Wi-Fi，可显著降低大文件下载中途失败）\n3. 新增本地阅读时长统计（默认关闭）：今日 / 近 7 天 / 累计与最近 7 天明细，可一键清除；仅记录在本机，不做任何联网上报",
-  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.1/Chapbook-v1.2.1.apk",
-  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.1/Chapbook-v1.2.1.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.1"
+  "versionCode": 10,
+  "versionName": "1.2.2",
+  "notes": "1. 阅读菜单重做为 M3E 表达性形态：条目改用 TransformingLazyColumn + TitleCard（图标 + 标签），滑动时呈现自然的缩放与形变\n2. 呼出方式改为仅屏幕底部边缘上滑，阅读区中央不再被手势占用；新增「退出阅读」并叠加 M3 AlertDialog 二次确认；跳页成功 / 失败改为瞬时反馈弹窗，自动消失\n3. 移除阅读页底部「回到章首」圆形箭头（使用频率低，且与新手势争抢同一片区域）；应用图标重新设计：羽毛笔加深色描边、背景改为浅紫 → 粉斜向条带",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.2/Chapbook-v1.2.2.apk",
+  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.2/Chapbook-v1.2.2.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.2"
 }

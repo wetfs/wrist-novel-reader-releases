@@ -28,18 +28,18 @@
 |---|---|
 | 应用名称 | 腕卷（Chapbook） |
 | 应用包名 | `org.eu.bluesky.chapbook` |
-| **版本号** | **v1.2.0**（versionCode `8`） |
+| **版本号** | **v1.2.1**（versionCode `9`） |
 | **发布日期** | **2026-09-26** |
-| 安装包文件 | [`Chapbook-v1.2.0.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk) |
-| 文件大小 | 5.29 MB |
+| 安装包文件 | [`Chapbook-v1.2.1.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.1/Chapbook-v1.2.1.apk) |
+| 文件大小 | 5.31 MB |
 | 支持平台 | Wear OS 3.0 及以上（Android 11 / API 30+，targetSdk 34） |
 | 签名信息 | 官方 Release 签名（与历史版本同一证书，可原地覆盖升级） |
-| SHA-256 | `5E2566280FEDEEF64372BF285B5D6251E9D571C0BC6513B50D0F6DD7576E1DBE` |
+| SHA-256 | `7FF4171514C20D1303389965B520D6F1C8607FEC286EB6814F17D18BFE0E99D3` |
 
 > **校验方式（Windows PowerShell）**
 >
 > ```powershell
-> Get-FileHash .\Chapbook-v1.2.0.apk -Algorithm SHA256
+> Get-FileHash .\Chapbook-v1.2.1.apk -Algorithm SHA256
 > ```
 >
 > 请务必核对哈希值，避免安装被篡改的安装包。
@@ -89,6 +89,7 @@
 - 目录：章节目录跳转、全文页码跳转
 - 书签：添加、跳转、删除书签
 - 自动记录阅读进度，打开即续读
+- **阅读时长统计（默认关闭）**：记录本机阅读时长，提供今日 / 近 7 天 / 累计与最近 7 天明细，可一键清除；仅在用户显式开启后计时，数据只存本机、不做任何联网上报
 
 **局域网传书（网页上传 / FTP）**
 - 网页上传（默认）：手表端一键开启服务后，手机或电脑用浏览器打开地址即可上传，**无需安装任何客户端**；同一页面还会列出当前书架，便于确认上传结果
@@ -98,11 +99,13 @@
 **个性化设置**
 - 沉浸式阅读控制面板（进度、排版、主题等一站式调节）
 - 翻页震动反馈（默认关闭）、自定义选项丰富
+- 加载指示器采用 MD3E 形态变形动画：图形在圆 / 圆角方 / 方 / 三角 / 六角 / 星形 / 花瓣之间连续变形，配合缓慢旋转与呼吸缩放
 
 **应用内更新**
 - 「关于与更新」页可检查新版本，展示更新说明并调用系统安装器直接完成升级
 - 启动时自动静默检查更新（24 小时节流），发现新版本弹窗展示更新内容，可直接下载升级；选择「稍后提醒」后该版本周期内不再打扰
 - 启动时若缺少「所有文件访问」权限，自动拉起系统授权页引导授权
+- 更新包与字体下载均为**全屏进度页**（MD3E 形态指示器 + 百分比 + 确定进度条），下载期间覆盖全界面避免误触并保持屏幕常亮——Wear OS 息屏会主动断开 Wi-Fi，这是大文件下载中途失败的主因
 
 **隐私与合规**
 - 首次启动展示隐私政策弹窗，未同意前不初始化任何第三方 SDK
@@ -115,14 +118,14 @@
 
 ### 1. 下载
 
-点击上方 [`Chapbook-v1.2.0.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk) 直链，或前往 [Releases](../../releases) 页面下载。
+点击上方 [`Chapbook-v1.2.1.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.1/Chapbook-v1.2.1.apk) 直链，或前往 [Releases](../../releases) 页面下载。
 
-> 历史测试版本（v1.0.0 ~ v1.1.4）已从本仓库清理，仅保留正式版本 v1.1.5 与 v1.2.0。
+> 历史测试版本（v1.0.0 ~ v1.1.4）已从本仓库清理，仅保留正式版本 v1.1.5、v1.2.0 与 v1.2.1。
 >
 > **中国大陆用户**：GitHub 直链在国内速度较慢，因此应用内更新（「设置 → 关于与更新」与启动更新提示）采用**双源**策略：优先使用 GitHub Release 直链，失败时自动改用国内 GitHub 加速镜像重试，全程无需手动干预。手动下载也可直接使用镜像直链：
 >
 > ```
-> https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk
+> https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.1/Chapbook-v1.2.1.apk
 > ```
 
 ### 2. 安装到手表
@@ -130,14 +133,14 @@
 **方式一：通过 ADB 侧载（推荐）**
 
 ```bash
-adb install -r Chapbook-v1.2.0.apk
+adb install -r Chapbook-v1.2.1.apk
 ```
 
 > 若手表已通过无线调试连接，且安装过程中出现 `device offline`，
 > 建议改用 Push 安装模式（Wear OS 3+ 对较大 APK 的流式安装易掉线）：
 >
 > ```bash
-> adb install --no-streaming -r Chapbook-v1.2.0.apk
+> adb install --no-streaming -r Chapbook-v1.2.1.apk
 > ```
 
 > 已安装旧版本时可直接覆盖安装；也可在应用内「设置 → 关于与更新」页检查并升级。
@@ -165,6 +168,7 @@ adb shell appops set org.eu.bluesky.chapbook MANAGE_EXTERNAL_STORAGE allow
 
 | 版本号 | 发布日期 | 安装包 | 更新说明 |
 |---|---|---|---|
+| v1.2.1 | 2026-09-26 | [`Chapbook-v1.2.1.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.1/Chapbook-v1.2.1.apk) | 【动效】全应用加载指示器改为 MD3E 形态变形动画（图形在 7 种形态间连续变形 + 旋转 + 呼吸缩放）。【下载】更新包与字体下载改为全屏进度页，下载期间保持屏幕常亮，降低手表息屏断网导致的下载失败。【统计】新增本地阅读时长统计（默认关闭）：今日 / 近 7 天 / 累计与最近 7 天明细，仅存本机、不上报。 |
 | v1.2.0 | 2026-09-26 | [`Chapbook-v1.2.0.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.0/Chapbook-v1.2.0.apk) | 【漫画】新增 CBZ / ZIP 图片包与图片型 EPUB 阅读（均自动识别），支持单页翻页与纵向连续滚动，表圈 / 表冠可缩放、放大后可拖动。【传书】新增「网页上传」通道：浏览器打开手表地址即可上传，无需安装任何客户端；原 FTP 通道保留。【字体】字体页可一键下载开源字体「霞鹜文楷」（完整版 / Lite 可选），不再需要手动传字体。【其他】书架区分小说与漫画并显示漫画页数；上传文件名过滤非法字符，中文文件名不再乱码。 |
 | v1.1.5 | 2026-09-26 | [`Chapbook-v1.1.5.apk`](https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.1.5/Chapbook-v1.1.5.apk) | **首个正式版本**。【界面】全面迁移到 Material Design 3：默认黑灰白中性配色，支持动态取色（Material You，跟随系统表盘/壁纸），统一 MD3 圆角、字阶与动效令牌，重做加载指示器与弹窗/面板的进出场动画。【体验】阅读页菜单改为上滑呼出；章节间无缝翻页；夜览模式；显示范围四边精细调节；自定义字体与繁简转换。【更新】启动与「关于」页均支持检查更新，应用内下载并调用系统安装器升级。 |
 

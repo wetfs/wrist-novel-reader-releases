@@ -28,18 +28,18 @@
 |---|---|
 | 应用名称 | 腕卷（Chapbook） |
 | 应用包名 | `org.eu.bluesky.chapbook` |
-| **版本号** | **v1.1.3**（versionCode `5`） |
+| **版本号** | **v1.1.4**（versionCode `6`） |
 | **发布日期** | **2026-09-26** |
-| 安装包文件 | [`Chapbook-v1.1.3.apk`](./Chapbook-v1.1.3.apk) |
-| 文件大小 | 5.01 MB |
+| 安装包文件 | [`Chapbook-v1.1.4.apk`](./Chapbook-v1.1.4.apk) |
+| 文件大小 | 5.02 MB |
 | 支持平台 | Wear OS 3.0 及以上（Android 11 / API 30+，targetSdk 34） |
 | 签名信息 | 官方 Release 签名（与 v1.0.0 同一证书，可原地覆盖升级） |
-| SHA-256 | `8A8209CA89C323541B65C9DCCD675C627C79F9CF7E168CA25A270A16C1B26193` |
+| SHA-256 | `1BCEC458D631F31B4F793B5BDE4FA46330CE8843A779B52A67159CA701055272` |
 
 > **校验方式（Windows PowerShell）**
 >
 > ```powershell
-> Get-FileHash .\Chapbook-v1.1.3.apk -Algorithm SHA256
+> Get-FileHash .\Chapbook-v1.1.4.apk -Algorithm SHA256
 > ```
 >
 > 请务必核对哈希值，避免安装被篡改的安装包。
@@ -107,7 +107,7 @@
 
 ### 1. 下载
 
-点击本仓库中的 [`Chapbook-v1.1.3.apk`](./Chapbook-v1.1.3.apk)，或前往 [Releases](../../releases) 页面下载对应版本。
+点击本仓库中的 [`Chapbook-v1.1.4.apk`](./Chapbook-v1.1.4.apk)，或前往 [Releases](../../releases) 页面下载对应版本。
 
 > **中国大陆用户**：GitHub Release 直链在国内下载较慢（实测约 70KB/s，5MB 安装包需 1 分钟以上）。
 > 更新包已同步至 Gitee 国内镜像（实测约 1.2MB/s，约 4 秒完成）：
@@ -119,14 +119,14 @@
 **方式一：通过 ADB 侧载（推荐）**
 
 ```bash
-adb install -r Chapbook-v1.1.3.apk
+adb install -r Chapbook-v1.1.4.apk
 ```
 
 > 若手表已通过无线调试连接，且安装过程中出现 `device offline`，
 > 建议改用 Push 安装模式（Wear OS 3+ 对较大 APK 的流式安装易掉线）：
 >
 > ```bash
-> adb install --no-streaming -r Chapbook-v1.1.3.apk
+> adb install --no-streaming -r Chapbook-v1.1.4.apk
 > ```
 
 > 已安装旧版本（v1.0.0 及以上）时可直接覆盖安装；也可在应用内「设置 → 关于与更新」页检查并升级。
@@ -154,6 +154,7 @@ adb shell appops set org.eu.bluesky.chapbook MANAGE_EXTERNAL_STORAGE allow
 
 | 版本号 | 发布日期 | 安装包 | 更新说明 |
 |---|---|---|---|
+| v1.1.4 | 2026-09-26 | `Chapbook-v1.1.4.apk` | 首次升级时自动跳转系统「安装未知应用」授权页，授权后自动开始下载；下载前预检安装权限，避免下载完整安装包后才发现无法安装。 |
 | v1.1.3 | 2026-09-26 | `Chapbook-v1.1.3.apk` | 更新包下载源改用 Gitee 国内镜像，下载速度由约 70KB/s 提升到约 1.2MB/s；主下载源失败时自动切换备用源（GitHub）。 |
 | v1.1.2 | 2026-09-26 | `Chapbook-v1.1.2.apk` | 【新功能】显示范围调节（四向内边距独立调整、三档预设、滑块/像素输入、实时预览、边界警示与一键优化）；夜览模式（暖色夜视配色、强度可调、对比度保障 WCAG AA）；启动自动检查更新弹窗。【修复】上滑呼出菜单与横滑翻页偶发互相误判。 |
 | v1.1.1 | 2026-09-26 | `Chapbook-v1.1.1.apk` | 【新功能】章节间无缝翻页：章末自动跳转下一章，章首向前翻页回到上一章末页，通过预加载相邻章节排版消除跨章翻页的空白间隙；关于页新增源代码仓库地址。【优化】跨章节翻页命中预加载时同步套用排版结果，新页立即可绘制。 |

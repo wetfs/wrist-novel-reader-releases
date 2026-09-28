@@ -1,8 +1,8 @@
 {
-  "versionCode": 11,
-  "versionName": "1.2.3",
-  "notes": "1. 性能优化版本：TXT / EPUB / FB2 导入改为流式解析，大体积书籍导入与书库扫描的内存峰值显著下降\n2. 阅读进度存储迁移到 DataStore：翻页频繁写入不再整文件重写，取进度零磁盘 I/O；旧进度首次启动自动迁移，阅读位置不丢失\n3. 新增 Baseline Profile：安装时预编译关键路径，冷启动、进入阅读页与首次翻页更流畅\n4. 微光 / AOD 环境模式下主动释放漫画位图缓存，内存压到官方 10MB 预算内，常显更省电",
-  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.3/Chapbook-v1.2.3.apk",
-  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.3/Chapbook-v1.2.3.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.3"
+  "versionCode": 12,
+  "versionName": "1.2.4",
+  "notes": "1. 书架格式色彩编码：TXT / EPUB / FB2 / HTML / CBZ / ZIP 各配专属色彩，圆形图标 + 文字标签双通道呈现\n2. 书架书籍删除：长按弹出确认对话框，同时删除文件、进度与书签，Toast 即时反馈\n3. 本地文件导入：书架新增「导入」入口，自研文件选择器浏览书库目录，圆屏适配\n4. 书籍列表按压反馈：按下 96% 缩放 + 80% 透明度，松开弹性恢复\n5. 修复删除书籍时文件未删除的问题",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.4/Chapbook-v1.2.4.apk",
+  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.4/Chapbook-v1.2.4.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.4"
 }

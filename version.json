@@ -1,8 +1,8 @@
 {
-  "versionCode": 12,
-  "versionName": "1.2.4",
-  "notes": "1. 书架格式色彩编码：TXT / EPUB / FB2 / HTML / CBZ / ZIP 各配专属色彩，圆形图标 + 文字标签双通道呈现\n2. 书架书籍删除：长按弹出确认对话框，同时删除文件、进度与书签，Toast 即时反馈\n3. 本地文件导入：书架新增「导入」入口，自研文件选择器浏览书库目录，圆屏适配\n4. 书籍列表按压反馈：按下 96% 缩放 + 80% 透明度，松开弹性恢复\n5. 修复删除书籍时文件未删除的问题",
-  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.4/Chapbook-v1.2.4.apk",
-  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.4/Chapbook-v1.2.4.apk",
-  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.4"
+  "versionCode": 13,
+  "versionName": "1.2.5",
+  "notes": "1. 修复更新下载进度条始终显示 0%：手动跟随 302 跳转取最终 Content-Length，总长未知时改用不确定指示器\n2. 修复阅读页缺字漏字：分页取子串少取末字符、圆屏逐行弦宽裁切行宽\n3. 修复菜单退出后阅读页空白：关闭时强制重绘 + 空白看门狗自愈\n4. 修复 v1.2.3 冷启动变慢：阅读进度改为 IO 协程异步水合\n5. 进度保存节流：滚动停止 1 秒或满 30 秒落盘，失败自动重试并反馈状态\n6. 下载全屏页指示器改用 Wear Compose Material 3 官方线性 / 圆形进度组件",
+  "apkUrl": "https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.5/Chapbook-v1.2.5.apk",
+  "apkUrlFallback": "https://ghfast.top/https://github.com/wetfs/wrist-novel-reader-releases/releases/download/v1.2.5/Chapbook-v1.2.5.apk",
+  "url": "https://github.com/wetfs/wrist-novel-reader-releases/releases/tag/v1.2.5"
 }
